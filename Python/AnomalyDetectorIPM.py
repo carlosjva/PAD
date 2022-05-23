@@ -1,6 +1,6 @@
 """
 Prototypical Projection Based Anomaly Detector
-Code by F. Vides
+Code by F. Vides, E. Segura, C. Vargas
 For Paper, "A Subspace Method for Time Series Anomaly Detection in Cyber-Physical Systems"
 by F. Vides, E. Segura, C. Vargas
 @authors: F. Vides, E. Segura, C. Vargas

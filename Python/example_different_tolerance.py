@@ -1,7 +1,7 @@
 """
 Prototypical Projection Based Anomaly Detector
-Code by F. Vides
-For Paper, "On Operator Theory-Based Anomaly Detection in Cyber-Physical Systems"
+Code by F. Vides, E. Segura, C. Vargas
+For Paper, "A Subspace Method for Time Series Anomaly Detection in Cyber-Physical Systems"
 by F. Vides, E. Segura, C. Vargas
 @authors: F. Vides, E. Segura, C. Vargas
 """
@@ -50,9 +50,9 @@ rest_3 = AnomalyDetectorSVD(signal = signal,
                             and_or = "AND")
 
 
-(d1,di,y,x0,x1,xm) = rest_1
-(d2,di,y,x0,x1,xm) = rest_2
-(d3,di,y,x0,x1,xm) = rest_3
+(d1,di,y,x0,x1,xm_1) = rest_1
+(d2,di,y,x0,x1,xm_2) = rest_2
+(d3,di,y,x0,x1,xm_3) = rest_3
 
 
 
@@ -60,7 +60,7 @@ figure(figsize =figsize)
 
 ax1 = subplot(3,1,1)
 plot(signal,'blue')
-plot(d1*signal,'darkorange')
+plot(d1*x0+xm_1,'darkorange')
 grid(color='k', linestyle='--', linewidth=0.5)
 ax1.set_title('Identified anomalies with tolerance = {:2.2f}'.format(tolerance_1),
               fontsize=12)
@@ -70,7 +70,7 @@ tight_layout()
 
 ax2 = subplot(3,1,2)
 plot(signal,'blue')
-plot(d2*signal,'darkorange')
+plot(d2*x0+xm_2,'darkorange')
 grid(color='k', linestyle='--', linewidth=0.5)
 ax2.set_title('Identified anomalies with tolerance = {:2.2f}'.format(tolerance_2), 
               fontsize=12)
@@ -79,7 +79,7 @@ tight_layout()
 
 ax3 = subplot(3,1,3)
 plot(signal,'blue')
-plot(d3*signal,'darkorange')
+plot(d3*x0+xm_3,'darkorange')
 grid(color='k', linestyle='--', linewidth=0.5)
 ax3.set_title('Identified anomalies with tolerance = {:2.2f}'.format(tolerance_3), fontsize=12)
 tight_layout()
