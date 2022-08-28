@@ -8,7 +8,7 @@ by F. Vides, E. Segura, C. Vargas
 
 
 
-def AnomalyDetectorIPM(signal, L, N_hankel, tolerance,and_or, tolIPM, kIterMax, q0):
+def AnomalyDetectorIPM(signal, L, N_hankel, tolerance, and_or, tolIPM, kIterMax, q0):
     from numpy import zeros, where, nan, ones, logical_or, logical_and
     from statistics import mean,stdev
     from scipy.linalg import hankel

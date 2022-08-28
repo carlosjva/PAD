@@ -43,8 +43,8 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_SVD_L={L}_N={N_hankel}_
 rest = AnomalyDetectorSVD(signal = signal, 
                           L = L,
                           N_hankel = N_hankel,
-                          and_or = and_or,
-                          tolerance = tolerance )
+                          tolerance = tolerance,
+                          and_or = and_or)
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
 
@@ -67,8 +67,8 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_SVD_L={L}_N={N_hankel}_
 rest = AnomalyDetectorSVD(signal = signal, 
                           L = L,
                           N_hankel = N_hankel,
-                          and_or = and_or,
-                          tolerance = tolerance )
+                          tolerance = tolerance,
+                          and_or = and_or)
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
 
@@ -95,8 +95,8 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_EigH_L={L}_N={N_hankel}
 rest = AnomalyDetectorEigH(signal = signal, 
                           L = L,
                           N_hankel = N_hankel,
-                          and_or = and_or,
-                          tolerance = tolerance)
+                          tolerance = tolerance,
+                          and_or = and_or)
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
 
@@ -119,8 +119,8 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_EigH_L={L}_N={N_hankel}
 rest = AnomalyDetectorSVD(signal = signal, 
                           L = L,
                           N_hankel = N_hankel,
-                          and_or = and_or,
-                          tolerance = tolerance)
+                          tolerance = tolerance,
+                          and_or = and_or)
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
 
@@ -145,6 +145,7 @@ kIterMax = 100
 q0 = 2313.020907 + 1e-1
 
 
+
 save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
     L = L,
     N_hankel = N_hankel,
@@ -156,8 +157,9 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_
 rest = AnomalyDetectorIPM(signal = signal, 
                           L = L, 
                           N_hankel = N_hankel,
+                          tolerance = tolerance,
                           and_or = and_or,
-                          tolerance = tolerance, tolIPM = tolIPM, 
+                          tolIPM = tolIPM, 
                           kIterMax = kIterMax,
                           q0 = q0)
 
@@ -182,6 +184,7 @@ kIterMax = 100
 q0 = 2313.020907 + 1e-1
 
 
+#Saving a PDF
 save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
     L = L,
     N_hankel = N_hankel,
@@ -193,11 +196,22 @@ save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_
 rest = AnomalyDetectorIPM(signal = signal, 
                           L = L, 
                           N_hankel = N_hankel,
+                          tolerance = tolerance,
                           and_or = and_or,
-                          tolerance = tolerance, tolIPM = tolIPM, 
-                          kIterMax = kIterMax, q0 = q0)
+                          tolIPM = tolIPM, 
+                          kIterMax = kIterMax, 
+                          q0 = q0)
 
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
 
 
+#Saving a PNG
+
+save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.png".format(
+    L = L,
+    N_hankel = N_hankel,
+    tolerance = tolerance,
+    and_or = and_or)
+
+plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)

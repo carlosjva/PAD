@@ -187,7 +187,7 @@ kIterMax = 100
 q0 = 2.5697 + 1e-3
 
 
-
+## Saving PDF
 save_signal_figure = "../Figures/real_signal_2_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
     L = L,
     N_hankel = N_hankel,
@@ -205,3 +205,18 @@ rest = AnomalyDetectorIPM(signal = signal,
                           q0 = q0)
 
 plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
+
+
+
+# Saving PNG
+
+save_signal_figure = "../Figures/real_signal_2_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.png".format(
+    L = L,
+    N_hankel = N_hankel,
+    tolerance = tolerance,
+    and_or = and_or)
+
+
+plotAnomalyDetector(signal, save_signal_figure, rest, figsize = figsize)
+
+
