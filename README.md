@@ -34,7 +34,7 @@ The figure below shows a signal with an anomaly. The figure is produced with the
 
 The figure below shows another signal with an anomaly. The figure is produced with the script `example_real_signal_2.py`
 
-![image](https://github.com/carlosjva/PAD/blob/main/Figures/real_signal_1_anomalies_IPM_L%3D75_N%3D1300_tolerance%3D1.1_AndOR%3DOR.png)
+![image](https://github.com/carlosjva/PAD/blob/main/Figures/real_signal_2_anomalies_IPM_L%3D90_N%3D900_tolerance%3D1.06_AndOR%3DOR.png)
 
 
 
