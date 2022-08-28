@@ -27,6 +27,6 @@ We need to set the `L` and `N` to form the Hankel matrix and find a appropiate t
 
 The figure below shows a signal with an anomaly. The figure is produced with the script `example_real_signal_1.py`
 
-![image](https://github.com/carlosjva/PAD/blob/main/Figures/real_signal_1_anomalies_EigH_L%3D75_N%3D1300_tolerance%3D1.06_AndOR%3DOR.pdf)
+![image](https://github.com/carlosjva/PAD/blob/main/Figures/real_signal_1_anomalies_IPM_L%3D75_N%3D1300_tolerance%3D1.1_AndOR%3DOR.png)
 
 
