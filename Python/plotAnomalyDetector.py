@@ -6,12 +6,31 @@ by F. Vides, E. Segura, C. Vargas
 @authors: F. Vides, E. Segura, C. Vargas
 """
 
-def plotAnomalyDetector(signal, save_signal_figure, resto, figsize):
-    
+def plotAnomalyDetector(signal, rest, figsize, save_signal_figure = False):
+    """
+    Parameters
+    ----------
+    signal: numpy array: float
+        The signal that contains the anomaly
+    rest: A set with the information of the anomaly detection
+        It is the output of the AnomalyDetectors functions
+    figsize: A set
+        Contains the figure size
+    save_signal_figure: String
+        Contains the directory, name and format where the figure with
+        the signal and its detected anomalies is going to be saved
+        
+
+    Returns
+    -------
+    This function doesn't return a value. It only plots the
+    signal with the detected points classified as anomalies
+    and the signal with the anomalie plotted together.
+    """
     from matplotlib.pyplot import plot,subplot,grid,tight_layout
     from matplotlib.pyplot import figure, savefig, axvspan, show
     
-    (d,di,y,x0,x1,xm) = resto
+    (d,di,y,x0,xm) = rest
     
     figure(figsize =figsize)
     
@@ -52,5 +71,9 @@ def plotAnomalyDetector(signal, save_signal_figure, resto, figsize):
     grid(color='k', linestyle='--', linewidth=0.5)
     ax3.set_title('Identified anomalies', fontsize=12)
     tight_layout()
-    savefig(save_signal_figure)
+    
+    #If there is a name, it is not False (True) and enter the If to
+    #save the figure
+    if save_signal_figure:    
+        savefig(save_signal_figure)
     #show()

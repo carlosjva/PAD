@@ -77,9 +77,9 @@ rest_3 = AnomalyDetectorIPM(signal = signal,
 
 
 
-(d1,di,y,x0,x1,xm_1) = rest_1
-(d2,di,y,x0,x1,xm_2) = rest_2
-(d3,di,y,x0,x1,xm_3) = rest_3
+(d1,di,y,x0,xm_1) = rest_1
+(d2,di,y,x0,xm_2) = rest_2
+(d3,di,y,x0,xm_3) = rest_3
 
 
 ## Save to PDF
