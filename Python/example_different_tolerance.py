@@ -113,8 +113,8 @@ grid(color='k', linestyle='--', linewidth=0.5)
 ax3.set_title('Identified anomalies with tolerance = {:2.2f}'.format(tolerance_3), fontsize=12)
 tight_layout()
 
-savefig("../Figures/real_signal_1_different_tolerances_L=75_N=1300_AndOR=OR.pdf")
-savefig("../Figures/real_signal_1_different_tolerances_L=75_N=1300_AndOR=OR.png")
+savefig("../Figures/real_signal_1_different_tolerances_L=75_N=1300_AndOR=OR.pdf", dpi= 450)
+savefig("../Figures/real_signal_1_different_tolerances_L=75_N=1300_AndOR=OR.png", dpi =800)
 
 
 
