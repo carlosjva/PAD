@@ -24,155 +24,6 @@ figsize = (10*scaling, 8*scaling)
 
 
 
-# With SVD
-
-# With AND and this parameters
-
-L = 75
-N_hankel = 1300
-tolerance = 0.43
-and_or = "AND"
-
-save_signal_figure = "../Figures/real_signal_1_anomalies_SVD_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
-
-
-rest = AnomalyDetectorSVD(signal = signal, 
-                          L = L,
-                          N_hankel = N_hankel,
-                          tolerance = tolerance,
-                          and_or = and_or)
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
-
-
-
-# with OR and this parameters
-
-L = 75
-N_hankel = 1300
-tolerance = 1.06
-and_or = "OR"
-
-save_signal_figure = "../Figures/real_signal_1_anomalies_SVD_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
-
-
-rest = AnomalyDetectorSVD(signal = signal, 
-                          L = L,
-                          N_hankel = N_hankel,
-                          tolerance = tolerance,
-                          and_or = and_or)
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
-
-
-
-
-
-# With Eig Hermitian
-
-# With AND and this parameters
-
-L = 75
-N_hankel = 1300
-tolerance = 0.43
-and_or = "AND"
-
-save_signal_figure = "../Figures/real_signal_1_anomalies_EigH_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
-
-
-rest = AnomalyDetectorEigH(signal = signal, 
-                          L = L,
-                          N_hankel = N_hankel,
-                          tolerance = tolerance,
-                          and_or = and_or)
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
-
-
-
-# with OR and this parameters
-
-L = 75
-N_hankel = 1300
-tolerance = 1.06
-and_or = "OR"
-
-save_signal_figure = "../Figures/real_signal_1_anomalies_EigH_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
-
-
-rest = AnomalyDetectorSVD(signal = signal, 
-                          L = L,
-                          N_hankel = N_hankel,
-                          tolerance = tolerance,
-                          and_or = and_or)
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
-
-
-
-
-# With Inverse Power Method IPM
-
-
-# Set the parameters and with AND
-
-L = 75
-N_hankel = 1300
-tolerance = 0.43
-and_or = "AND"
-
-
-tolIPM = 1e-8
-kIterMax = 100
-#This q0 is an approximation to the lowest singular value
-#This can be estimated by other methods, but here we use it as known
-q0 = 2313.020907 + 1e-1
-
-
-
-save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
-
-
-
-rest = AnomalyDetectorIPM(signal = signal, 
-                          L = L, 
-                          N_hankel = N_hankel,
-                          tolerance = tolerance,
-                          and_or = and_or,
-                          tolIPM = tolIPM, 
-                          kIterMax = kIterMax,
-                          q0 = q0)
-
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
-
-
-
 # With Inverse Power Method IPM
 
 # Set the parameters and with OR
@@ -189,12 +40,6 @@ kIterMax = 100
 q0 = 2313.020907 + 1e-1
 
 
-#Saving a PDF
-save_signal_figure = "../Figures/real_signal_1_anomalies_IPM_L={L}_N={N_hankel}_tolerance={tolerance}_AndOR={and_or}.pdf".format(
-    L = L,
-    N_hankel = N_hankel,
-    tolerance = tolerance,
-    and_or = and_or)
 
 
 
@@ -207,9 +52,6 @@ rest = AnomalyDetectorIPM(signal = signal,
                           kIterMax = kIterMax, 
                           q0 = q0)
 
-
-plotAnomalyDetector(signal, rest, figsize = figsize, 
-                    save_signal_figure = save_signal_figure)
 
 
 #Saving a PNG for the Github repo

@@ -75,5 +75,5 @@ def plotAnomalyDetector(signal, rest, figsize, save_signal_figure = False):
     #If there is a name, it is not False (True) and enter the If to
     #save the figure
     if save_signal_figure:    
-        savefig(save_signal_figure, dpi = 450)
+        savefig(save_signal_figure, dpi = 400)
     #show()
